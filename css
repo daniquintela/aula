@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF=8">
+        <title>aula 15-03</title>
+
+    <style>
+        #título{
+            color: palevioletred
+        }
+
+        .cinza{
+            color: gray
+        }
+
+        .fontegrande{
+            font-size: 35px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 id="título">Cabeçalho</h1>
+        <h3 class="cinza">Um subtítulo</h3>
+    </header>
+
+    <main>
+        <p class="fontegrande cinza">abcdefghijklmnopqrstuvwxyz</p>
+    </main>
+</body>
+</html>
