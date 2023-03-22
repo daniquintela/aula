@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <style>
+        table#tabela{
+            border-width: 4px;
+            border-style: outset;
+            border-color: mediumslateblue;
+            border-collapse: collapse;
+        }
+        table td{
+            border: 3px outset mediumslateblue;
+            width: 50px;
+            text-align: center;
+            height: 25px;
+        }
+        thead{
+            background-color: ;
+        }
+        .cinza{
+            background-color: darkgray;
+        }
+        .rosa{
+            background-color: lightpink;
+        }
+        .verde_mar{
+            background-color: lightseagreen;
+        }
+    </style>
+    <body>
+        <h1>Tabela</h1>
+
+        <table id="tabela">
+            <thead>
+                <!--Cabeçalho da tabela-->
+                <tr>
+                    <td>Matrícula</td>
+                    <td>Nome</td>
+                    <td>Nota</td>
+                    <td>Nota 2</td>
+                    <td>Média</td>
+                    <td>Status</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Corpo da tabela-->
+                <tr class="cinza">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                </tr>
+
+                <tr class="rosa">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="verde_mar">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="cinza">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="rosa">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="verde_mar">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="cinza">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="rosa">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+
+                 <tr class="verde_mar">
+                    <td>202357860</td>
+                    <td>Fulano</td>
+                    <td>8,5</td>
+                    <td>9,3</td>
+                    <td>8,9</td>
+                    <td>Aprovado</td>
+                 </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
