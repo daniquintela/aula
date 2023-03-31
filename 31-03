@@ -1,0 +1,26 @@
+--1)
+select department_name as departamento
+     , department_id as cod_dep
+from departments
+order by department_name
+
+--2) 27
+
+--3)
+select first_name as nome
+     , last_name
+     , to_char(hire_date, 'DD/MM/YYYY') as contratacao
+     , salary as salario
+     , employee_id as cod_emp
+from employees
+order by first_name 
+
+--4) 107
+
+--5)
+select d.department_name as departamento
+     , e.first_name as nome
+     , to_char(e.hire_date, 'YYYY/MM/DD') as contrataçao
+     , e.salary as salario
+from departments d
+inner join employees e on (e.department_id = d.department_id)
