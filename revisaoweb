@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+</head>
+<body>
+    <header>
+        <h1 class="top">Ursinhos carinhosos</h1>
+    </header>
+    <link rel="stylesheet" href="index.css"> 
+    <img class=img1 src="https://d3u63wyfuci0ch.cloudfront.net/wp-content/uploads/2018/07/25142737/care-bears-th-1000x500.jpg" alt="ursinhos carinhosos">
+    <br>
+<div class="botao"> 
+    <button><a href="https://youtu.be/zkdTsznDtqY" target="_blank">Episódio 26</a></button>
+</div>
+</body>
+</html>
+
+
+.top {
+    font-style: italic;
+    color: indianred;
+    border: 3px solid indianred;
+}
+
+.img1 {
+    display: block;
+    margin: 0 auto;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: cadetblue;
+    border: none;
+}
+
+a {
+    color: whitesmoke;
+}
