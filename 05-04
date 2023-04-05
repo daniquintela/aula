@@ -1,0 +1,25 @@
+ <figure>
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>BIOGRAPHY</figcaption>
+        </figure>
+        <figure>
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>OUR OFFICE</figcaption>
+        </figure>
+        <figure>
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>OUR FOUNDER</figcaption>
+        </figure>
+        <figure>
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>REFERRALS</figcaption>
+        </figure>
+        <figure> 
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>FORMS</figcaption>
+        </figure>
+        <figure>
+        <img id="imagem" src="https://static.thenounproject.com/png/1034957-200.png" alt="">
+        <figcaption>HISTORY</figcaption>
+        </figure>
+    </div><!--img_txt-->
