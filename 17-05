@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17-05</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Conversor de Temperatura</h1>
+  <label for="temperatura">Digite a temperatura:</label>
+  <input type="number" id="temperatura">
+  <button onclick="converterTemperatura()">Converter</button>
+
+  <h2>Resultados:</h2>
+  <p id="celsius"></p>
+  <p id="fahrenheit"></p>
+  <p id="kelvin"></p>
+
+  <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+function converterTemperatura() {
+    var temperaturaInput = document.getElementById("temperatura");
+    var temperatura = parseFloat(temperaturaInput.value);
+  
+    var celsius = temperatura;
+    var fahrenheit = (temperatura * 9/5) + 32;
+    var kelvin = temperatura + 273.15;
+  
+    document.getElementById("celsius").textContent = "Celsius (ºC): " + celsius.toFixed(2);
+    document.getElementById("fahrenheit").textContent = "Fahrenheit (ºF): " + fahrenheit.toFixed(2);
+    document.getElementById("kelvin").textContent = "Kelvin (K): " + kelvin.toFixed(2);
+  
+    if (temperatura > 30) {
+      document.body.style.backgroundColor = "red";
+    } else if (temperatura < 19) {
+      document.body.style.backgroundColor = "blue";
+    } else if (temperatura > 18 < 31) {
+      document.body.style.backgroundColor = "yellow";
+    }
+  }
