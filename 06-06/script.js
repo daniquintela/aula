@@ -1,28 +1,42 @@
+function gerarCartela(){
+    var nomeJogador = prompt('Digite o nome do Jogador')
+
+    var cartela = [gerarNumerosAleatorios(5,1,15),
+                   gerarNumerosAleatorios(5,16,30), 
+                   gerarNumerosAleatorios(5,31,45),
+                   gerarNumerosAleatorios(5,46,60), 
+                   gerarNumerosAleatorios(5,61,75)]
+
+    jogadores.push({
+        nomeJogador: nomeJogador,
+        cartela: cartela
+    });
+
+    desenharCartela(nomeJogador, cartela);
+
+    console.log(jogadores)
+}
+
 function desenharCartela(){
 
-    var nome_jogador = prompt('Digite o nome do Jogador')
+    var div_cartela = document.querySelector('cartela')
 
-var div_cartelas = document.getElementById('cartelas')
-
-    var div_cartelas = document.createElement('div');
-    div_cartelas.className = 'cartela;'
-
-    varh4 = document.createElement('h4');
+    var h4 = document.createElement('h4');
     h4.innerText = 'Nome do Jogador';
 
-    div_cartelas.appendChild(h4);
+    div_cartela.appendChild(h4);
 
     var table = document.createElement('table');
     var thead = document.createElement('thead');
     var thB = document.createElement('th');
     thB.innerText = "B"
-    var thB = document.createElement('th');
+    var thI = document.createElement('th');
     thI.innerText = "I"
-    var thB = document.createElement('th');
+    var thN = document.createElement('th');
     thN.innerText = "N"
-    var thB = document.createElement('th');
+    var thG = document.createElement('th');
     thG.innerText = "G"
-    var thB = document.createElement('th');
+    var thO = document.createElement('th');
     thO.innerText = "O"
 
     thead.appendChild(thB)
@@ -31,21 +45,26 @@ var div_cartelas = document.getElementById('cartelas')
     thead.appendChild(thG)
     thead.appendChild(thO)
 
-var tbody = document.createElement('tbody');
-for(var i = 0 < 5; i++;) {
-    var tr = document.createElement('tr');
-    for(var j = 0; j < 5; j++){
+    var tbody = document.createElement('tbody');
+    for(var i = 0; i < 5; i++) {
+      var tr = document.createElement('tr');
+        for(var j = 0; j < 5; j++){
         var td = document.createElement('td');
-        td.innerText = 'X'
-        tr.appendChild(td)
+        if(i == 2 && j == 2){
+            td.innerText = "X";
+            tr.appendChild(td);
+        }else{
+            td.innerText = cartela[j][i]
+            tr.appendChild(td);
+            td.innerText = "X"
+        }
+    tbody.appendChild(tr);
     }
-    tbody.appendChild(tr)
+
+    table.appendChild(thead);
+    table.appendChild(tbody);
+    div_cartela.appendChild(table);
+    div_cartela.appendChild(div_cartela);
+
 }
-
-
-table.appendChild(tbody)
-div_cartela.appendChild('table');
-table.appendChild(thead);
-div_cartela.appendChild(div_cartelas);
-
 }
