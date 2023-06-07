@@ -1,3 +1,26 @@
+var jogadores = []
+
+function gerarNumerosAleatorios(quantidade, min, max){
+
+    if(quantidade > (max - min)){
+        console.log("Intervalo insuficiente ...");
+        return;
+    }
+
+    var numeros = [];
+
+    while(numeros.length < quantidade){
+        var aleatorio = Math.floor(Math.random()*(max - min) + min);
+        
+        if(!numeros.includes(aleatorio)){
+            numeros.push(aleatorio);
+        }
+    }
+
+    return numeros;
+
+}
+
 function gerarCartela(){
     var nomeJogador = prompt('Digite o nome do Jogador')
 
@@ -13,21 +36,24 @@ function gerarCartela(){
     });
 
     desenharCartela(nomeJogador, cartela);
-
-    console.log(jogadores)
+    console.log(nomeJogador)
 }
 
-function desenharCartela(){
+function resetarJogo(){
+    jogadores = []
+}
 
-    var div_cartela = document.querySelector('cartela')
+function desenharCartela(nome, cartela){
+
+    var div = document.getElementById('cartelas');
 
     var h4 = document.createElement('h4');
-    h4.innerText = 'Nome do Jogador';
-
-    div_cartela.appendChild(h4);
+    h4.innerText = nome;
 
     var table = document.createElement('table');
     var thead = document.createElement('thead');
+    var tbody = document.createElement('tbody')
+
     var thB = document.createElement('th');
     thB.innerText = "B"
     var thI = document.createElement('th');
@@ -45,26 +71,24 @@ function desenharCartela(){
     thead.appendChild(thG)
     thead.appendChild(thO)
 
-    var tbody = document.createElement('tbody');
     for(var i = 0; i < 5; i++) {
-      var tr = document.createElement('tr');
+        var tr = document.createElement('tr');
         for(var j = 0; j < 5; j++){
-        var td = document.createElement('td');
-        if(i == 2 && j == 2){
-            td.innerText = "X";
-            tr.appendChild(td);
-        }else{
-            td.innerText = cartela[j][i]
-            tr.appendChild(td);
-            td.innerText = "X"
+            var td = document.createElement('td');
+            if(i == 2 && j == 2){
+                td.innerText = "X";
+                tr.appendChild(td);
+            }else{
+                td.innerText = cartela[j][i]
+                tr.appendChild(td);
+            }
+        tbody.appendChild(tr);
         }
-    tbody.appendChild(tr);
     }
 
+    div.appendChild(h4);
     table.appendChild(thead);
     table.appendChild(tbody);
-    div_cartela.appendChild(table);
-    div_cartela.appendChild(div_cartela);
+    div.appendChild(table);
 
-}
 }
